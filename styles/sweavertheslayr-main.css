@@ -23,17 +23,19 @@ body {
     align-items: center;
     background-image: linear-gradient(  rgb(239, 82, 0), rgb(254, 105, 0), rgb(254, 135, 0), rgb(270, 117, 77) 80%);
     width: 100%;
-    height: 6em;
+    height: 3.5em;
 }
 
 .beach {
-    margin-top: 6em;
+    margin-top: 3.5em;
     transform-style: preserve-3d;
     position: relative;
-    height: 2.5em;
+    height: 1.6em;
     width: 200%;
-    border-radius: 35%;
-    background-image: repeating-conic-gradient(from 0deg, rgb(188, 61, 16) 0deg 0.00003deg, rgb(167, 70, 20) 0.00003deg 0.00006deg);
+    min-width: 12em;
+    border-top-left-radius: 35%;
+    border-top-right-radius: 35%;
+    background-color: #4B3621;
 }
 
 .sun {
@@ -42,6 +44,7 @@ body {
     height: 3em;
     border-radius: 50%;
     background-image: radial-gradient(white, yellow 150%);
+    transform-style: preserve-3d;
     transform: translateZ(-100px);
 }
 
@@ -51,12 +54,19 @@ body {
     transform: translate(2em, -1.5em);
     width: 3em;
     height: 3em;
-    border-radius: 50%;
     transform-style: preserve-3d;
 }
 
 .heading {
-    position: relative;
+    transform: translateZ(100px);
+    padding-top: 0.75em;
+    font-size: 0.9em;
+    display: flex;
+}
+
+.theslayr {
+    font-size: 0.5em;
+    padding-top: 0.95em;
 }
 
 .navbar {
