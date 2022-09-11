@@ -22,10 +22,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient( rgb(253, 143, 0), coral 65%);
+    background-image: linear-gradient(  rgb(239, 82, 0), rgb(254, 105, 0), rgb(254, 135, 0), rgb(270, 117, 77) 80%);
     border-radius: 10px;
     width: 100%;
-    height: 3em;
+    height: 6em;
 }
 
 .title {
