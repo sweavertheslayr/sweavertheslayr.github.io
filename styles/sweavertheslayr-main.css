@@ -71,7 +71,7 @@ body {
 
 .navbar {
     position: relative;
-    margin: 0;
+    margin-top: 3.5em;
     height: 2em;
-    background-color: #f4e0a0;
+    background-color:#A67B5B;
 }
