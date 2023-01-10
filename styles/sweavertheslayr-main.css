@@ -82,4 +82,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
+
+}
+
+.donate a:hover {
+    opacity: 0.5;
+    
 }
