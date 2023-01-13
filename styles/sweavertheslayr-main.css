@@ -77,16 +77,41 @@ body {
 }
 
 .donate {
+    width: 95%;
+    height: 1em;
     position: relative;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem;
-
 }
 
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+
+
+.donate-text {
+    position: relative;
+    color: antiquewhite;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.donate-button {
+    position: relative;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    height: 1em;
+    color: #4B3621;
+}
 .donate a:hover {
     opacity: 0.5;
-    
 }
