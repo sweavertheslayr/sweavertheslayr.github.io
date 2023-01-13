@@ -1,5 +1,5 @@
 body {
- background: black;
+ background: rgb(54, 54, 54);
  margin: 0;
  display: block;
 }
@@ -9,7 +9,6 @@ body {
     font-size: 75px;
     width: 100%;
     height: fit-content;
-    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,14 +22,14 @@ body {
     align-items: center;
     background-image: linear-gradient(  rgb(239, 82, 0), rgb(254, 105, 0), rgb(254, 135, 0), rgb(270, 117, 77) 80%);
     width: 100%;
-    height: 3.5em;
+    height: 2em;
 }
 
 .beach {
-    margin-top: 3.5em;
+    margin-top: 1em;
     transform-style: preserve-3d;
     position: relative;
-    height: 1.6em;
+    height: 1em;
     width: 200%;
     min-width: 12em;
     border-top-left-radius: 35%;
@@ -71,7 +70,6 @@ body {
 
 .navbar {
     position: relative;
-    margin-top: 3.5em;
     height: 0.5em;
     background-color:#A67B5B;
 }
@@ -81,7 +79,6 @@ body {
     font-size: 75px;
     width: 100%;
     height: fit-content;
-    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
