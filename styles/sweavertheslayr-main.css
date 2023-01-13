@@ -77,14 +77,14 @@ body {
 }
 
 .donate {
-    width: 95%;
-    height: 1em;
-    position: relative;
-    margin: 0;
+    display: flex;
+    font-size: 75px;
+    width: 100%;
+    height: fit-content;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
 }
 
 a:link { text-decoration: none; }
@@ -92,13 +92,11 @@ a:visited { text-decoration: none; }
 a:hover { text-decoration: none; }
 a:active { text-decoration: none; }
 
-
-
 .donate-text {
     position: relative;
-    color: antiquewhite;
     margin: 0;
     display: flex;
+    font-size: 26px;
     justify-content: center;
     align-items: center;
 }
@@ -109,9 +107,16 @@ a:active { text-decoration: none; }
     justify-content: center;
     align-items: center;
     width: 2em;
+    color: black;
     height: 1em;
-    color: #4B3621;
+    background-color: #A67B5B;
+    border-radius: 0.25em;
+    border-style: solid;
+    border-color: #4B3621;
+    border-width: 0.05em;
 }
 .donate a:hover {
-    opacity: 0.5;
+    border-color: #A67B5B;
+    background-color: #4B3621;
+    color: whitesmoke;
 }
