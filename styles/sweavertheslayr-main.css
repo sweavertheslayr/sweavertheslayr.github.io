@@ -90,6 +90,50 @@ body {
     align-items: center;
 }
 
+.download {
+    display: flex;
+    font-size: 75px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-text {
+    position: relative;
+    margin: 0;
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.downloadbutton {
+    position: relative;
+    margin: 0;
+    margin-top: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    color: black;
+    height: 1em;
+    background-color: #A67B5B;
+    border-radius: 0.25em;
+    border-style: solid;
+    border-color: #4B3621;
+    border-width: 0.05em;
+    transition: 0.45s;
+}
+
+.download a:hover {
+    border-color: #A67B5B;
+    background-color: #4B3621;
+    color: whitesmoke;
+    transition: 0.45s;
+}
+
 a:link { text-decoration: none; }
 a:visited { text-decoration: none; }
 a:hover { text-decoration: none; }
@@ -106,6 +150,7 @@ a:active { text-decoration: none; }
 .donate-button {
     position: relative;
     margin: 0;
+    margin-top: 0.5em;
     display: flex;
     justify-content: center;
     align-items: center;
