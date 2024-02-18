@@ -4,8 +4,8 @@
     /* grid variables */
     --rows: 11;
     --columns: 11;
-    --minimum-tile-size: 5vw;
-    --tile-size: 5vw;
+    --minimum-tile-size: 5px;
+    --tile-size: min(5vw, 5vh);
     --maximum-tile-size: 20px;
     --odd-color: #333333;
     --even-color: #444444;
@@ -16,8 +16,8 @@
     --button-pressed-color: #a7a7a7;
 
     /* calculated variables */
-    --min-height: calc(var(--minimum-tile-size) * var(--rows));
-    --min-width: calc(var(--minimum-tile-size) * var(--columns));
+    --min-height: calc(var(--tile-size) * var(--rows));
+    --min-width: calc(var(--tile-size) * var(--columns));
 }
 
 * {
@@ -47,15 +47,9 @@
 }
 
 .grid div {
-    min-height: var(--minimum-tile-size);
-    min-width: var(--minimum-tile-size);
     height: var(--tile-size);
     width: var(--tile-size);
-    max-height: var(--maximum-tile-size);
-    max-width: var(--maximum-tile-size);
 }
-
-
 
 /* controls */
 
@@ -122,16 +116,10 @@ button:not(:active) {
 }
 
 
-
-
-
-
-
-
 #game-board {
     position: absolute;
     display: grid;
-    width: calc(var(--minimum-tile-size) * var(--columns));
+    width: calc(var(--tile-size) * var(--columns));
     background-color: transparent;
     grid-template-columns: repeat(var(--columns), 1fr);
     grid-template-rows: repeat(var(--rows), 1fr);
@@ -139,8 +127,8 @@ button:not(:active) {
 
 
 #game-board  div {
-    height: var(--minimum-tile-size);
-    width: var(--minimum-tile-size);
+    height: var(--tile-size);
+    width: var(--tile-size);
 }
 
 .snake {
