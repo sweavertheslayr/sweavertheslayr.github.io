@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function up() {
     if (lastInputDirection.y !== 0) return;
     inputDirection = { x: 0, y: -1 };
-}
+}   
 
 function down() {
     if (lastInputDirection.y !== 0) return;

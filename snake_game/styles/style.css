@@ -5,6 +5,8 @@
     --rows: 11;
     --columns: 11;
     --minimum-tile-size: 5vw;
+    --tile-size: 5vw;
+    --maximum-tile-size: 20px;
     --odd-color: #333333;
     --even-color: #444444;
 
@@ -45,8 +47,12 @@
 }
 
 .grid div {
-    height: var(--minimum-tile-size);
-    width: var(--minimum-tile-size);
+    min-height: var(--minimum-tile-size);
+    min-width: var(--minimum-tile-size);
+    height: var(--tile-size);
+    width: var(--tile-size);
+    max-height: var(--maximum-tile-size);
+    max-width: var(--maximum-tile-size);
 }
 
 
