@@ -4,12 +4,12 @@
     /* grid variables */
     --rows: 11;
     --columns: 11;
-    --minimum-tile-size: 40px;
+    --minimum-tile-size: 5vw;
     --odd-color: #333333;
     --even-color: #444444;
 
     /* d pad variables */
-    --button-size: 40vw;
+    --button-size: 10vw;
     --button-color: #888888;
     --button-pressed-color: #a7a7a7;
 
@@ -62,7 +62,7 @@
     display: flex;
     justify-content: center;
 
-    margin-top: 20vh;
+    margin-top: 10vh;
 }
 
 .movement {

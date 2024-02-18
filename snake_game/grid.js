@@ -1,7 +1,7 @@
 
 // game variables
-export let rows = 20;
-export let columns = 21;
+export let rows = 15;
+export let columns = 15;
 
 // style variables
 let oddColor = getComputedStyle(document.documentElement)
