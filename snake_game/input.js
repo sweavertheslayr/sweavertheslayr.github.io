@@ -1,3 +1,5 @@
+import { addInput } from "./snake.js"
+
 let inputDirection = { x: 0, y: 0 };
 let lastInputDirection = { x: 0, y: 0 };
 
@@ -22,7 +24,6 @@ window.addEventListener('keydown', e => {
     }
 })
 
-
 document.addEventListener('DOMContentLoaded', function () {
     const upButton = document.querySelector('.button-up');
     const leftButton = document.querySelector('.button-left');
@@ -38,24 +39,32 @@ document.addEventListener('DOMContentLoaded', function () {
 function up() {
     if (lastInputDirection.y !== 0) return;
     inputDirection = { x: 0, y: -1 };
+    processInput();
 }   
 
 function down() {
     if (lastInputDirection.y !== 0) return;
     inputDirection = { x: 0, y: 1 };
+    processInput();
 }
 
 function left() {
     if (lastInputDirection.x !== 0) return;
     inputDirection = { x: -1, y: 0 };
+    processInput();
 }
 
 function right() {
     if (lastInputDirection.x !== 0) return;
     inputDirection = { x: 1, y: 0 };
+    processInput();
 }
 
-export function getInputDirection() {
+function processInput() {
     lastInputDirection = inputDirection;
-    return inputDirection;
+    addInput(inputDirection);
+}
+
+export function init() {
+
 }

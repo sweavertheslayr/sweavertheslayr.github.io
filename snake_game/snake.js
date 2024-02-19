@@ -1,27 +1,54 @@
-import { getInputDirection } from "./input.js";
 import { rows, columns } from "./grid.js";
 
 export const SNAKE_SPEED = 5;
 
-const snakeBody = [{ x: 8, y: 8 }];
+export const snakeBody = [{ x: 8, y: 8 }, { x: 8, y: 8 }, { x: 8, y: 8 }];
 
-export function update() {
-    const inputDirection = getInputDirection();
+const inputBuffer = [];
 
-    for (let i = snakeBody.length - 2; i >= 0; i--) {
-        snakeBody[i+1] = { ...snakeBody[i] };
+let newInputDirection = { x: 0, y: 0 };
+
+export function addInput(newInput) {
+    inputBuffer.push(newInput);
+}
+
+function move(removeTail) {
+
+    // if there is a new input
+    if (inputBuffer.length !== 0) {
+        // set input direction
+        newInputDirection = inputBuffer[0];
+        // remove direction from buffer
+        inputBuffer.shift();
     }
 
+    // set input direction
+    const inputDirection = newInputDirection;
+    
+    // create new head
+    let snakeHead = {
+        x: snakeBody[0].x + inputDirection.x,
+        y: snakeBody[0].y + inputDirection.y
+    };
+    // prepend new head to body
+    snakeBody.unshift(snakeHead);
+    // remove tail
+    if (removeTail) snakeBody.pop();
+}
 
-    snakeBody[0].x += inputDirection.x;
-    snakeBody[0].y += inputDirection.y;
+export function grow() {
+    move(false);
+}
+
+export function update() {
+    move(true);
 }
 
 export function draw(gameBoard) {
     snakeBody.forEach(segment => {
         const snakeElement = document.createElement('div');
-        snakeElement.style.gridRowStart = segment.y % (rows + 1);
-        snakeElement.style.gridColumnStart = segment.x % (columns + 1);
+        snakeElement.style.gridRowStart = segment.y;
+        snakeElement.style.gridColumnStart = segment.x;
         snakeElement.classList.add('snake');
         gameBoard.appendChild(snakeElement);
     })

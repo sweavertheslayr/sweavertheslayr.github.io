@@ -24,10 +24,10 @@ export function draw(grid) {
         const newDiv = document.createElement('div');
 
         if (colorCounter % 2 === 0) {
-            newDiv.style.backgroundColor = evenColor;
+            newDiv.style.backgroundColor = oddColor;
         }
         else {
-            newDiv.style.backgroundColor = oddColor;
+            newDiv.style.backgroundColor = evenColor;
         }
 
         if (columns % 2 === 0) {
