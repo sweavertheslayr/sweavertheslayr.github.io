@@ -29,10 +29,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const downButton = document.querySelector('.button-down');
     const rightButton = document.querySelector('.button-right');
 
-    upButton.addEventListener('click', up);
-    leftButton.addEventListener('click', left);
-    downButton.addEventListener('click', down);
-    rightButton.addEventListener('click', right);
+    upButton.addEventListener('touchstart', up);
+    leftButton.addEventListener('touchstart', left);
+    downButton.addEventListener('touchstart', down);
+    rightButton.addEventListener('touchstart', right);
 });
 
 function up() {
