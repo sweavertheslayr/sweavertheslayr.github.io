@@ -1,27 +1,21 @@
-import { rows, columns } from "./grid.js";
-import { grow as snakeGrow, snakeBody } from "./snake.js"
+import { randomPosition } from "./grid.js";
+import { grow as snakeGrow, onSnake, addSegmentsAdd } from "./snake.js"
 
-let position = { x: 0, y: 0 };
+let position = { x: 2, y: 6 };
 
 function move() {
-    let newPos;
     let occupied;
-    let xPos;
-    let yPos;
 
     do {
-        xPos = Math.floor(Math.random() * rows);
-        yPos = Math.floor(Math.random() * columns);
 
-        newPos = { x: xPos, y: yPos };
+        // set to random position
+        position = randomPosition();
 
         // Check if the new position is occupied by the snake
-        occupied = snakeBody.some(segment => segment.x === newPos.x && segment.y === newPos.y);
+        occupied = onSnake(position, false);
 
     } while (occupied);
 
-    position.x = xPos;
-    position.y = yPos;
 }
 
 export function update() {
@@ -33,7 +27,8 @@ export function update() {
 function checkEaten() {
 
     // if eaten
-    if ((snakeBody[0].x === position.x) && (snakeBody[0].y === position.y)) {
+    if (onSnake(position, false)) {
+        addSegmentsAdd(1);
         snakeGrow();
         move();
     }

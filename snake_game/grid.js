@@ -12,10 +12,22 @@ let evenColor = getComputedStyle(document.documentElement)
 // add grid divs
 let numberOfDivsToAdd = rows * columns;
 
+export function randomPosition() {
+    
+    return {
+        x: Math.floor(Math.random() * rows) + 1,
+        y: Math.floor(Math.random() * columns) + 1
+    }
+}
+
+export function outsideGrid(position) {
+
+    return ((position.x < 1) || (position.x > columns)) 
+        || ((position.y < 1) || (position.y > rows));
+}
 
 export function draw(grid) {
 
-    
     grid.querySelectorAll('div').forEach(div => div.remove());
 
     let colorCounter = 0;

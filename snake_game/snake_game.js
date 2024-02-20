@@ -1,8 +1,8 @@
 
-import { update as updateSnake, draw as drawSnake, SNAKE_SPEED } from "./snake.js";
+import { update as updateSnake, draw as drawSnake, dead as snakeDead, SNAKE_SPEED } from "./snake.js";
 import { update as updateFood, draw as drawFood } from "./food.js";
 import { draw as drawGrid, rows, columns } from "./grid.js";
-import { init } from "./input.js";
+import { init, getPressedButton } from "./input.js";
 
 const root = document.documentElement;
 
@@ -32,13 +32,19 @@ function main(currentTime) {
 
     lastRenderTime = currentTime;
 
-    update();
+    if (getPressedButton()) {
+        update();
+    }
+    
+
     draw();
 }
 
 function update() {
     updateSnake();
     updateFood();
+
+    if (snakeDead()) location.reload();
 }
 
 function draw() {

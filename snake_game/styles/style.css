@@ -47,7 +47,9 @@
     --even-color: #B8918A;
     --color-background: #59797D; */
 
-
+/* 
+    --color-snake: #93B5A2;
+    --color-food: #FF5367; */
 
 }
 
@@ -86,6 +88,8 @@
 .grid div {
     height: var(--tile-size);
     width: var(--tile-size);
+    box-sizing: border-box;
+    border: rgba(22, 22, 22, 30%) 1px solid;
 }
 
 /* controls */
@@ -173,9 +177,13 @@ button:not(:active) {
 .snake {
     background-color: var(--color-snake);
     box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 25%); 
+    box-sizing: border-box;
+    border: rgba(22, 22, 22, 50%) 1px solid;
 }
 
 .food {
     background-color: var(--color-food);
     box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 50%); 
+    box-sizing: border-box;
+    border: rgba(22, 22, 22, 50%) 1px solid;
 }

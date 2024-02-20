@@ -2,6 +2,7 @@ import { addInput } from "./snake.js"
 
 let inputDirection = { x: 0, y: 0 };
 let lastInputDirection = { x: 0, y: 0 };
+export let pressedButton = false;
 
 window.addEventListener('keydown', e => {
     switch (e.key) {
@@ -61,8 +62,13 @@ function right() {
 }
 
 function processInput() {
+    pressedButton = true;
     lastInputDirection = inputDirection;
     addInput(inputDirection);
+}
+
+export function getPressedButton() {
+    return pressedButton;
 }
 
 export function init() {
