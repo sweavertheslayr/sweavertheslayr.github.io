@@ -23,6 +23,10 @@
     --color-snake-purple: #8380B3;
 
     /* 333333, 444444 */
+    
+    --color-score: white;
+    --color-score-background: #A37067;
+    --color-score-background-border: #B8918A;
 
     --color-snake: #93B5A2;
     --color-food: #FF5367;
@@ -31,6 +35,8 @@
     --color-background: #59797D; 
     --button-color: #93B5A2;
     --button-pressed-color: #B8D1C1;
+    --color-game-text-background: rgba(255, 83, 103, 90%);
+    --color-game-text: rgba(147, 181, 162, 100%);
 }
 
 .palletes {
@@ -52,6 +58,14 @@
     --color-food: #FF5367; */
 
 }
+@keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
 
 * {
     margin: 0;
@@ -90,6 +104,21 @@
     width: var(--tile-size);
     box-sizing: border-box;
     border: rgba(22, 22, 22, 30%) 1px solid;
+}
+
+.game-text {
+    position: absolute;
+    top: 24%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensure it's above the game board */
+    text-align: center;
+    border-radius: 2rem;
+    padding: 3rem;
+
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 50%); 
+    color: var(--color-game-text);
+    background-color: var(--color-game-text-background);
 }
 
 /* controls */
@@ -154,6 +183,10 @@ button:not(:active) {
     grid-column: 3;
 }
 
+.fade {
+    animation: fadeOut 0.5s ease;
+}
+
 .hide {
     display: none;
 }
@@ -186,4 +219,47 @@ button:not(:active) {
     box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 50%); 
     box-sizing: border-box;
     border: rgba(22, 22, 22, 50%) 1px solid;
+}
+.oswald-font {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 24;
+    font-style: normal;
+}
+
+.game-info-container {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.game-info {
+    width: calc(var(--tile-size) * var(--columns));
+    display: flex;
+    position: relative;
+}
+
+.score {
+    display: flex;
+    background-color: var(--color-score-background);
+    color: var(--color-score);
+    padding: 1rem;
+    padding-top: -50rem;
+    border: var(--color-score-background-border) 0.1rem solid;
+    border-top: 0;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.score p {
+    background-color: transparent;
+    padding-left: 0.5rem;
+}
+
+.high-score {
+    margin: 0 auto;
+}
+
+.current-score {
+    margin: 0 auto;
 }

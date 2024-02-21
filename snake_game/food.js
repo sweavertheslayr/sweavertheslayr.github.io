@@ -1,5 +1,6 @@
 import { randomPosition } from "./grid.js";
 import { grow as snakeGrow, onSnake, addSegmentsAdd } from "./snake.js"
+import { addScore } from "./score.js";
 
 let position = { x: 2, y: 6 };
 
@@ -29,6 +30,7 @@ function checkEaten() {
     // if eaten
     if (onSnake(position, false)) {
         addSegmentsAdd(1);
+        addScore(1);
         snakeGrow();
         move();
     }

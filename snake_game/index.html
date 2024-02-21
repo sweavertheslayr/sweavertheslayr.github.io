@@ -6,12 +6,22 @@
     <title>snake</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/mediaqueries.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <script src="snake_game.js" type="module"></script>
 </head>
 <body>
+    <div class="game-info-container">
+        <div class="game-info oswald-font">
+            <div class="high-score score">High Score:<p id="high-score"></p></div>
+            <div class="current-score score">Score:<p id="current-score"></p></div>
+        </div>
+    </div>
     <div class="world">
         <div class="grid"></div>
         <div id="game-board"></div>
+        <div class="game-text hide">Press an Arrow Key to start</div>
     </div>
     <div class="controls">
         <div class="movement">
