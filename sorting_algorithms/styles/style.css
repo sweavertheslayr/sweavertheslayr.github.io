@@ -1,0 +1,103 @@
+
+
+:root {
+    --color-background: hsl(0, 0%, 10%);
+    --color-border: hsl(0, 0%, 5%);
+
+    --color-bars: hsl(0, 0%, 20%);
+    --color-bars-selected: hsl(120, 50%, 50%);
+    --color-bars-compare: hsl(230, 50%, 50%);
+
+    --color-select-background: hsl(0, 0%, 20%);
+
+    --color-highlight: hsl(0, 100%, 100%);
+}
+
+* {
+    border: 0;
+    margin: 0;
+    height: 99vh;
+    background-color: var(--color-background);
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.1rem;
+    flex-direction: column;
+    border: var(--color-highlight) 0.1rem solid;
+    justify-content: center;
+}
+
+body div {
+    width: 100%;
+    height: 10vh;
+}
+
+body .graph {
+    align-self: center;
+    align-items: baseline;
+    justify-content: center;
+    display: flex;
+    min-height: 60vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 5vh;
+    max-width: 90vw;
+}
+
+.bar {
+    background-color: var(--color-bars);
+    border-radius: 0.25rem;
+    border: var(--color-border) 1px solid;
+    transition: all 0.5s ease;
+}
+
+.selected {
+    background-color: var(--color-bars-selected);
+}
+
+body #algorithm {
+    font-size: large;
+    height: fit-content;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    max-width: 90vw;
+    border-radius: 0.2rem;
+    background-color: var(--color-select-background);
+    color: var(--color-highlight);
+    text-align: center;
+}
+
+body #algorithm > * {
+    font-size: large;
+    align-self: flex-start;
+    height: fit-content;
+    border-radius: 0.2rem;
+    background-color: var(--color-border);
+    color: var(--color-highlight);
+    text-align: center;
+}
+
+body .controls {
+    display: flex;
+    height: 5vh;
+    justify-content: center;
+}
+
+.media {
+    align-self: center;
+    height: 2rem;
+    margin-top: 5vh;
+    border: var(--color-border) 0.1px solid;
+    font-size: 2rem;
+    padding-bottom: 2.3rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-bars);
+    color: var(--color-highlight);
+    overflow: hidden;
+}
+
+.material-icons {
+    background-color: transparent;
+}
