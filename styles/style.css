@@ -355,6 +355,10 @@ section {
     height: 90%;
 }
 
+.small {
+    height: 95%;
+}
+
 .project-title {
     margin: 1rem;
     color: black;

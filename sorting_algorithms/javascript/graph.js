@@ -1,6 +1,6 @@
 
 
-export const bar_count = 50;
+export const bar_count = 100;
 const bar_max = 100;
 const bar_min = 5;
 const bar_width = '1rem';
