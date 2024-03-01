@@ -62,6 +62,9 @@ body #algorithm {
     height: fit-content;
     margin-left: 10vh;
     margin-right: 10vh;
+    padding: 0.5rem;
+    max-width: 12rem;
+    align-self: center;
     max-width: 90vw;
     border-radius: 0.2rem;
     background-color: var(--color-select-background);

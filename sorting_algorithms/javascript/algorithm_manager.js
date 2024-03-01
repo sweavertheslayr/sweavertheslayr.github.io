@@ -1,5 +1,4 @@
 
 
-import { bubbleSort } from "./bubble_sort.js";
 
-export const frameRate = 20;
+export const frameRate = 0;
